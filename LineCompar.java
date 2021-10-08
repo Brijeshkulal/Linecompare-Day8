@@ -26,14 +26,18 @@ public class LineCompar
 		lengthOfLine2 = Math.sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4));
 		System.out.println("Length of the line1: " + lengthOfLine1);
 		System.out.println("Length of the line2: " + lengthOfLine2);
-		if (lengthOfLine1 == lengthOfLine2) 
+		Double s1 = lengthOfLine1;
+		Double s2 = lengthOfLine2;
+		int compare = s1.compareTo(s2);
+		if (s1 == s2) 
 		{
-            System.out.println("Both the lines are equal");
-        }
-        else 
+		System.out.println("Both Lines are Equal");
+		} else if (s2 > s1) 
 		{
-            System.out.println("Both the lines are not equal");
-        }
+			System.out.println("Line2 is greater than line1");
+		} else 
+		{
+			System.out.println("Line1 is greater than line2");
 		}
-}}
+		}
 }
